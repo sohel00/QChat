@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +12,148 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GY-Bw-KmL" customClass="AnimatedView" customModule="QChat" customModuleProvider="target">
+                                <rect key="frame" x="40" y="208.5" width="295" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfw-aW-JqI">
+                                        <rect key="frame" x="3" y="3" width="289" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qfw-aW-JqI" firstAttribute="leading" secondItem="0GY-Bw-KmL" secondAttribute="leading" constant="3" id="Ggc-Qs-lXF"/>
+                                    <constraint firstAttribute="bottom" secondItem="qfw-aW-JqI" secondAttribute="bottom" constant="3" id="XJe-a4-E32"/>
+                                    <constraint firstItem="qfw-aW-JqI" firstAttribute="top" secondItem="0GY-Bw-KmL" secondAttribute="top" constant="3" id="ZmC-Gk-tae"/>
+                                    <constraint firstAttribute="trailing" secondItem="qfw-aW-JqI" secondAttribute="trailing" constant="3" id="dC3-v1-G22"/>
+                                    <constraint firstAttribute="height" constant="50" id="ycd-LK-HZW"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="direction">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUv-MM-tHP" customClass="AnimatedView" customModule="QChat" customModuleProvider="target">
+                                <rect key="frame" x="40" y="288.5" width="295" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUd-rR-5ty">
+                                        <rect key="frame" x="3" y="3" width="289" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gUd-rR-5ty" secondAttribute="trailing" constant="3" id="1SN-AG-AQG"/>
+                                    <constraint firstItem="gUd-rR-5ty" firstAttribute="leading" secondItem="XUv-MM-tHP" secondAttribute="leading" constant="3" id="5tc-7X-QP8"/>
+                                    <constraint firstAttribute="height" constant="50" id="cNr-Me-Xr5"/>
+                                    <constraint firstAttribute="bottom" secondItem="gUd-rR-5ty" secondAttribute="bottom" constant="3" id="qLP-G3-23l"/>
+                                    <constraint firstItem="gUd-rR-5ty" firstAttribute="top" secondItem="XUv-MM-tHP" secondAttribute="top" constant="3" id="u27-pt-DuA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="direction">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lD6-7R-238" customClass="AnimatedView" customModule="QChat" customModuleProvider="target">
+                                <rect key="frame" x="40" y="368.5" width="295" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WIi-cQ-P3V">
+                                        <rect key="frame" x="3" y="3" width="289" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="WIi-cQ-P3V" firstAttribute="top" secondItem="lD6-7R-238" secondAttribute="top" constant="3" id="1vf-Ie-17M"/>
+                                    <constraint firstAttribute="trailing" secondItem="WIi-cQ-P3V" secondAttribute="trailing" constant="3" id="fzS-Id-O6j"/>
+                                    <constraint firstAttribute="bottom" secondItem="WIi-cQ-P3V" secondAttribute="bottom" constant="3" id="kOe-f2-mNZ"/>
+                                    <constraint firstItem="WIi-cQ-P3V" firstAttribute="leading" secondItem="lD6-7R-238" secondAttribute="leading" constant="3" id="tSa-Ny-TWm"/>
+                                    <constraint firstAttribute="height" constant="50" id="xdq-GL-GZt"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="direction">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlQ-Gg-4C3" customClass="AnimatedView" customModule="QChat" customModuleProvider="target">
+                                <rect key="frame" x="40" y="460.5" width="295" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnA-ap-IyU" customClass="CircularButton" customModule="QChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
+                                        <color key="backgroundColor" red="0.92528384923934937" green="0.26404723525047302" blue="0.1979510486125946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YnA-ap-IyU" secondAttribute="trailing" id="AfX-61-VFV"/>
+                                    <constraint firstItem="YnA-ap-IyU" firstAttribute="top" secondItem="vlQ-Gg-4C3" secondAttribute="top" id="HoJ-j5-FH3"/>
+                                    <constraint firstAttribute="bottom" secondItem="YnA-ap-IyU" secondAttribute="bottom" id="KDj-Q3-tZH"/>
+                                    <constraint firstAttribute="height" constant="50" id="Uai-41-S1U"/>
+                                    <constraint firstItem="YnA-ap-IyU" firstAttribute="leading" secondItem="vlQ-Gg-4C3" secondAttribute="leading" id="qYg-gP-lbw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="direction">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxD-3q-FH3">
+                                <rect key="frame" x="120.5" y="72.5" width="134.5" height="55"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="46"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NxD-3q-FH3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="2W9-JM-qv5"/>
+                            <constraint firstItem="lD6-7R-238" firstAttribute="top" secondItem="XUv-MM-tHP" secondAttribute="bottom" constant="30" id="2wT-sA-lyR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XUv-MM-tHP" secondAttribute="trailing" constant="40" id="337-NG-YXV"/>
+                            <constraint firstItem="lD6-7R-238" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4wT-Ze-0ov"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lD6-7R-238" secondAttribute="trailing" constant="40" id="5U8-YO-3lD"/>
+                            <constraint firstItem="vlQ-Gg-4C3" firstAttribute="top" secondItem="lD6-7R-238" secondAttribute="bottom" constant="42" id="6lP-jq-whC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0GY-Bw-KmL" secondAttribute="trailing" constant="40" id="DGs-d6-e8I"/>
+                            <constraint firstItem="vlQ-Gg-4C3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Eh4-Xp-6zl"/>
+                            <constraint firstItem="XUv-MM-tHP" firstAttribute="top" secondItem="0GY-Bw-KmL" secondAttribute="bottom" constant="30" id="J5t-YS-TJx"/>
+                            <constraint firstItem="XUv-MM-tHP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="JET-6T-88v"/>
+                            <constraint firstItem="0GY-Bw-KmL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="lIq-UO-sbA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vlQ-Gg-4C3" secondAttribute="trailing" constant="40" id="lKC-Sg-8x8"/>
+                            <constraint firstItem="NxD-3q-FH3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ltR-WQ-VQH"/>
+                            <constraint firstItem="0GY-Bw-KmL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="pef-c5-Az0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
