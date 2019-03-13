@@ -104,25 +104,41 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlQ-Gg-4C3" customClass="AnimatedView" customModule="QChat" customModuleProvider="target">
                                 <rect key="frame" x="40" y="460.5" width="295" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnA-ap-IyU" customClass="CircularButton" customModule="QChat" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UQx-vM-6dh">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
-                                        <color key="backgroundColor" red="0.92528384923934937" green="0.26404723525047302" blue="0.1979510486125946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Register">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="registerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9W-GH-2nq"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqV-cB-lRk" customClass="CircularButton" customModule="QChat" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="50"/>
+                                                <color key="backgroundColor" red="0.92528384919999995" green="0.26404723530000002" blue="0.19795104860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Login">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDw-yY-x02"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YnA-ap-IyU" customClass="CircularButton" customModule="QChat" customModuleProvider="target">
+                                                <rect key="frame" x="157.5" y="0.0" width="137.5" height="50"/>
+                                                <color key="backgroundColor" red="0.92528384923934937" green="0.26404723525047302" blue="0.1979510486125946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Register">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="registerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9W-GH-2nq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="YnA-ap-IyU" secondAttribute="trailing" id="AfX-61-VFV"/>
-                                    <constraint firstItem="YnA-ap-IyU" firstAttribute="top" secondItem="vlQ-Gg-4C3" secondAttribute="top" id="HoJ-j5-FH3"/>
-                                    <constraint firstAttribute="bottom" secondItem="YnA-ap-IyU" secondAttribute="bottom" id="KDj-Q3-tZH"/>
+                                    <constraint firstAttribute="trailing" secondItem="UQx-vM-6dh" secondAttribute="trailing" id="4c8-Sj-VPy"/>
+                                    <constraint firstItem="UQx-vM-6dh" firstAttribute="top" secondItem="vlQ-Gg-4C3" secondAttribute="top" id="HP3-pX-mgY"/>
+                                    <constraint firstAttribute="bottom" secondItem="UQx-vM-6dh" secondAttribute="bottom" id="OCZ-5a-K9T"/>
                                     <constraint firstAttribute="height" constant="50" id="Uai-41-S1U"/>
-                                    <constraint firstItem="YnA-ap-IyU" firstAttribute="leading" secondItem="vlQ-Gg-4C3" secondAttribute="leading" id="qYg-gP-lbw"/>
+                                    <constraint firstItem="UQx-vM-6dh" firstAttribute="leading" secondItem="vlQ-Gg-4C3" secondAttribute="leading" id="l4s-kG-iof"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="direction">
@@ -139,23 +155,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9V-hI-9AX">
-                                <rect key="frame" x="94.5" y="610" width="186" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with ♥️ in India" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-9j-Ss0">
+                                <rect key="frame" x="108.5" y="627.5" width="158.5" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <state key="normal" title="Already have an account?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nt6-oS-xNU"/>
-                                </connections>
-                            </button>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NxD-3q-FH3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="2W9-JM-qv5"/>
                             <constraint firstItem="lD6-7R-238" firstAttribute="top" secondItem="XUv-MM-tHP" secondAttribute="bottom" constant="30" id="2wT-sA-lyR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a9V-hI-9AX" secondAttribute="bottom" constant="25" id="318-Cz-35f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XUv-MM-tHP" secondAttribute="trailing" constant="40" id="337-NG-YXV"/>
                             <constraint firstItem="lD6-7R-238" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4wT-Ze-0ov"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lD6-7R-238" secondAttribute="trailing" constant="40" id="5U8-YO-3lD"/>
@@ -164,11 +175,12 @@
                             <constraint firstItem="vlQ-Gg-4C3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Eh4-Xp-6zl"/>
                             <constraint firstItem="XUv-MM-tHP" firstAttribute="top" secondItem="0GY-Bw-KmL" secondAttribute="bottom" constant="30" id="J5t-YS-TJx"/>
                             <constraint firstItem="XUv-MM-tHP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="JET-6T-88v"/>
-                            <constraint firstItem="a9V-hI-9AX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lG0-U7-loS"/>
                             <constraint firstItem="0GY-Bw-KmL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="lIq-UO-sbA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vlQ-Gg-4C3" secondAttribute="trailing" constant="40" id="lKC-Sg-8x8"/>
                             <constraint firstItem="NxD-3q-FH3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ltR-WQ-VQH"/>
                             <constraint firstItem="0GY-Bw-KmL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="pef-c5-Az0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gvI-9j-Ss0" secondAttribute="bottom" constant="20" id="she-Hz-64k"/>
+                            <constraint firstItem="gvI-9j-Ss0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vnf-qV-sOl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>

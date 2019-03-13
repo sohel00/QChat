@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class WelcomeViewController: UIViewController {
 
@@ -25,10 +26,24 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func loginPressed(_ sender: Any) {
         dismissKeyboard()
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            loginUser()
+        } else {
+            ProgressHUD.showError("Email And Password is missing!")
+        }
     }
     
     @IBAction func registerPressed(_ sender: Any) {
         dismissKeyboard()
+        if emailTextField.text != "" && passwordTextField.text != "" && repeatPasswordTextField.text != "" {
+            if passwordTextField.text == repeatPasswordTextField.text {
+                registerUser()
+            } else {
+                ProgressHUD.showError("Passwords don't match!")
+            }
+        } else {
+            ProgressHUD.showError("All Fields are required!")
+        }
     }
     
     @IBAction func backgroundTap(_ sender: UITapGestureRecognizer) {
@@ -36,6 +51,22 @@ class WelcomeViewController: UIViewController {
     }
     
     //MARK: Helper Functions
+    
+    func loginUser() {
+        ProgressHUD.show("Loging In...")
+        FUser.loginUserWith(email: emailTextField.text!, password: passwordTextField.text!) { (error) in
+            if error != nil {
+                ProgressHUD.showError(error!.localizedDescription)
+                return
+            }
+            
+            self.goToApp()
+        }
+    }
+    
+    func registerUser() {
+        print("Register")
+    }
     
     func dismissKeyboard(){
         self.view.endEditing(true)
@@ -45,5 +76,10 @@ class WelcomeViewController: UIViewController {
         self.emailTextField.text = ""
         self.passwordTextField.text = ""
         self.repeatPasswordTextField.text = ""
+    }
+    
+    func goToApp() {
+        ProgressHUD.dismiss()
+        
     }
 }
