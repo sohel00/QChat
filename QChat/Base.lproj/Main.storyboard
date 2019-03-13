@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="QChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0GY-Bw-KmL" customClass="AnimatedView" customModule="QChat" customModuleProvider="target">
                                 <rect key="frame" x="40" y="208.5" width="295" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfw-aW-JqI">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qfw-aW-JqI">
                                         <rect key="frame" x="3" y="3" width="289" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,7 +48,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUv-MM-tHP" customClass="AnimatedView" customModule="QChat" customModuleProvider="target">
                                 <rect key="frame" x="40" y="288.5" width="295" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUd-rR-5ty">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUd-rR-5ty">
                                         <rect key="frame" x="3" y="3" width="289" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,7 +76,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lD6-7R-238" customClass="AnimatedView" customModule="QChat" customModuleProvider="target">
                                 <rect key="frame" x="40" y="368.5" width="295" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WIi-cQ-P3V">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WIi-cQ-P3V">
                                         <rect key="frame" x="3" y="3" width="289" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,6 +111,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M9W-GH-2nq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -136,11 +139,23 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9V-hI-9AX">
+                                <rect key="frame" x="94.5" y="610" width="186" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Already have an account?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nt6-oS-xNU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="NxD-3q-FH3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="2W9-JM-qv5"/>
                             <constraint firstItem="lD6-7R-238" firstAttribute="top" secondItem="XUv-MM-tHP" secondAttribute="bottom" constant="30" id="2wT-sA-lyR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a9V-hI-9AX" secondAttribute="bottom" constant="25" id="318-Cz-35f"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XUv-MM-tHP" secondAttribute="trailing" constant="40" id="337-NG-YXV"/>
                             <constraint firstItem="lD6-7R-238" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="4wT-Ze-0ov"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lD6-7R-238" secondAttribute="trailing" constant="40" id="5U8-YO-3lD"/>
@@ -149,15 +164,29 @@
                             <constraint firstItem="vlQ-Gg-4C3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Eh4-Xp-6zl"/>
                             <constraint firstItem="XUv-MM-tHP" firstAttribute="top" secondItem="0GY-Bw-KmL" secondAttribute="bottom" constant="30" id="J5t-YS-TJx"/>
                             <constraint firstItem="XUv-MM-tHP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="JET-6T-88v"/>
+                            <constraint firstItem="a9V-hI-9AX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lG0-U7-loS"/>
                             <constraint firstItem="0GY-Bw-KmL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="lIq-UO-sbA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vlQ-Gg-4C3" secondAttribute="trailing" constant="40" id="lKC-Sg-8x8"/>
                             <constraint firstItem="NxD-3q-FH3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ltR-WQ-VQH"/>
                             <constraint firstItem="0GY-Bw-KmL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.7" id="pef-c5-Az0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="exc-uy-E04" appends="YES" id="cUI-LT-C1O"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="qfw-aW-JqI" id="f8k-Ko-5BP"/>
+                        <outlet property="passwordTextField" destination="gUd-rR-5ty" id="hWa-mT-nxh"/>
+                        <outlet property="repeatPasswordTextField" destination="WIi-cQ-P3V" id="rVI-ea-u5T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="exc-uy-E04">
+                    <connections>
+                        <action selector="backgroundTap:" destination="BYZ-38-t0r" id="prG-ab-yky"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
