@@ -65,7 +65,9 @@ class WelcomeViewController: UIViewController {
     }
     
     func registerUser() {
-        print("Register")
+        dismissKeyboard()
+        performSegue(withIdentifier: "fromWelcomeToFinishRegistration", sender: self)
+        cleanTextFields()
     }
     
     func dismissKeyboard(){
@@ -80,6 +82,21 @@ class WelcomeViewController: UIViewController {
     
     func goToApp() {
         ProgressHUD.dismiss()
+        cleanTextFields()
+        dismissKeyboard()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION), object: nil, userInfo: [kUSERID: FUser.currentId()])
         
+        let mainVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApplication") as! UITabBarController
+        present(mainVC, animated: true, completion: nil)
+    }
+    
+    //MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "fromWelcomeToFinishRegistration" {
+            let vc = segue.destination as! FinishRegistrationViewController
+            vc.email = self.emailTextField.text!
+            vc.password = self.passwordTextField.text
+        }
     }
 }

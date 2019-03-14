@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1883DF59222D492900E9A959 /* AnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883DF58222D492900E9A959 /* AnimatedView.swift */; };
-		1883DF5B222D526200E9A959 /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883DF5A222D526200E9A959 /* CircularButton.swift */; };
+		1883DF5B222D526200E9A959 /* SDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1883DF5A222D526200E9A959 /* SDButton.swift */; };
 		188E8BF622280C1C009404B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E8BF522280C1C009404B0 /* AppDelegate.swift */; };
 		188E8BFB22280C1C009404B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188E8BF922280C1C009404B0 /* Main.storyboard */; };
 		188E8BFD22280C1F009404B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188E8BFC22280C1F009404B0 /* Assets.xcassets */; };
@@ -19,12 +19,14 @@
 		189CC2A42238E03D00A17163 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CC2A32238E03D00A17163 /* Constants.swift */; };
 		189CC2A62238E2FD00A17163 /* CollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CC2A52238E2FD00A17163 /* CollectionReference.swift */; };
 		189CC2A82238E44000A17163 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CC2A72238E44000A17163 /* HelperFunctions.swift */; };
+		189CC2AA2239101900A17163 /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CC2A92239101900A17163 /* FinishRegistrationViewController.swift */; };
+		18A9D05B223A665400A5DE55 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A9D05A223A665400A5DE55 /* SettingTableViewController.swift */; };
 		26ADA17834F9DDE8C01FF1DF /* Pods_QChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D14E7FFB6181797926D13A /* Pods_QChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1883DF58222D492900E9A959 /* AnimatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedView.swift; sourceTree = "<group>"; };
-		1883DF5A222D526200E9A959 /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
+		1883DF5A222D526200E9A959 /* SDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDButton.swift; sourceTree = "<group>"; };
 		188E8BF222280C1C009404B0 /* QChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188E8BF522280C1C009404B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188E8BFA22280C1C009404B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 		189CC2A32238E03D00A17163 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		189CC2A52238E2FD00A17163 /* CollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReference.swift; sourceTree = "<group>"; };
 		189CC2A72238E44000A17163 /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		189CC2A92239101900A17163 /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
+		18A9D05A223A665400A5DE55 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		268BD51BC94C98079A6A0CA1 /* Pods-QChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-QChat/Pods-QChat.release.xcconfig"; sourceTree = "<group>"; };
 		9B0C0A0052A3B3EF1753EEFA /* Pods-QChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QChat/Pods-QChat.debug.xcconfig"; sourceTree = "<group>"; };
 		A6D14E7FFB6181797926D13A /* Pods_QChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,21 +88,47 @@
 		188E8BF422280C1C009404B0 /* QChat */ = {
 			isa = PBXGroup;
 			children = (
+				189CC2AC2239108A00A17163 /* Classes */,
+				189CC2AB2239105900A17163 /* Helpers */,
+				189CC2AD2239206400A17163 /* Controller */,
 				188E8BF522280C1C009404B0 /* AppDelegate.swift */,
-				189CC29B2238C94900A17163 /* WelcomeViewController.swift */,
-				189CC2A12238E02B00A17163 /* FUser.swift */,
-				189CC2A32238E03D00A17163 /* Constants.swift */,
-				189CC2A52238E2FD00A17163 /* CollectionReference.swift */,
-				189CC2A72238E44000A17163 /* HelperFunctions.swift */,
 				188E8BF922280C1C009404B0 /* Main.storyboard */,
 				188E8BFC22280C1F009404B0 /* Assets.xcassets */,
 				188E8BFE22280C1F009404B0 /* LaunchScreen.storyboard */,
 				188E8C0122280C1F009404B0 /* Info.plist */,
 				189CC29D2238D7A800A17163 /* GoogleService-Info.plist */,
 				1883DF58222D492900E9A959 /* AnimatedView.swift */,
-				1883DF5A222D526200E9A959 /* CircularButton.swift */,
+				1883DF5A222D526200E9A959 /* SDButton.swift */,
 			);
 			path = QChat;
+			sourceTree = "<group>";
+		};
+		189CC2AB2239105900A17163 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				189CC2A32238E03D00A17163 /* Constants.swift */,
+				189CC2A72238E44000A17163 /* HelperFunctions.swift */,
+				189CC2A52238E2FD00A17163 /* CollectionReference.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		189CC2AC2239108A00A17163 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				189CC2A12238E02B00A17163 /* FUser.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		189CC2AD2239206400A17163 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				189CC29B2238C94900A17163 /* WelcomeViewController.swift */,
+				189CC2A92239101900A17163 /* FinishRegistrationViewController.swift */,
+				18A9D05A223A665400A5DE55 /* SettingTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		3F7D5F800C81C82D0DE322A3 /* Frameworks */ = {
@@ -269,9 +299,11 @@
 				189CC2A62238E2FD00A17163 /* CollectionReference.swift in Sources */,
 				189CC2A82238E44000A17163 /* HelperFunctions.swift in Sources */,
 				189CC2A22238E02B00A17163 /* FUser.swift in Sources */,
-				1883DF5B222D526200E9A959 /* CircularButton.swift in Sources */,
+				1883DF5B222D526200E9A959 /* SDButton.swift in Sources */,
+				18A9D05B223A665400A5DE55 /* SettingTableViewController.swift in Sources */,
 				189CC29C2238C94900A17163 /* WelcomeViewController.swift in Sources */,
 				1883DF59222D492900E9A959 /* AnimatedView.swift in Sources */,
+				189CC2AA2239101900A17163 /* FinishRegistrationViewController.swift in Sources */,
 				188E8BF622280C1C009404B0 /* AppDelegate.swift in Sources */,
 				189CC2A42238E03D00A17163 /* Constants.swift in Sources */,
 			);

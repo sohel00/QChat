@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CircularButton: UIButton {
+class SDButton: UIButton {
 
     override func awakeFromNib() {
         self.layer.cornerRadius = self.frame.height/2
